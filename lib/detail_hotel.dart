@@ -35,6 +35,7 @@ class _DetailHotelState extends State<DetailHotel> {
         title: Text("${widget.name}"),
       ),
       body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 10),
         child: Center(
           child: Column(
             children: [
@@ -47,10 +48,26 @@ class _DetailHotelState extends State<DetailHotel> {
               //   height: 24,
               // ),
               Image.network("${widget.gambar}"),
-              Text("${widget.name}"),
-              Text("${widget.location}"),
-              Text("Harga per Kamar ${widget.harga}"),
-              Text("Link Pemesanan"),
+
+              Container(
+                padding: const EdgeInsets.only(top: 5.0),
+                child: Text("${widget.name}"),
+              ),
+              Container(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 2.0),
+                child: Text("${widget.location}"),
+              ),
+              Container(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 2.0),
+                child: Text("Harga per Kamar ${widget.harga}"),
+              ),
+              Container(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 2.0),
+                child: Text("Link Pemesanan"),
+              ),
+              // Text("${widget.location}"),
+              // Text("Harga per Kamar ${widget.harga}"),
+              // Text("Link Pemesanan"),
               SizedBox(
                 height: 12,
               ),
