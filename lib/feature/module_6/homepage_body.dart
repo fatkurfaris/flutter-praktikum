@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_e_123190147/feature/module_6/hive/contact_list.dart';
-import 'package:mobile_e_123190147/feature/module_6/shared_pref/shared_pref_page.dart';
-import 'package:mobile_e_123190147/tools/common_submit_button.dart';
+import 'package:flutter_tugas_2/feature/module_6/hive/contact_list.dart';
+import 'package:flutter_tugas_2/feature/module_6/shared_pref/shared_pref_page.dart';
+import 'package:flutter_tugas_2/tools/common_submit_button.dart';
 
 class HomePageBody extends StatefulWidget {
   const HomePageBody({Key? key}) : super(key: key);
@@ -16,23 +16,22 @@ class _HomePageBodyState extends State<HomePageBody> {
     return Container(
       child: Column(
         children: [
-          Text("Module 5", style: TextStyle(fontSize: 24),),
+          Text(
+            "Module 5",
+            style: TextStyle(fontSize: 24),
+          ),
           CommonSubmitButton(
               labelButton: "Shared Preferenced",
               submitCallback: (String value) {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SharedPrefPage())
-                );
-              }
-          ),
+                    MaterialPageRoute(builder: (context) => SharedPrefPage()));
+              }),
           CommonSubmitButton(
               labelButton: "Hive Database",
               submitCallback: (String value) {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => ContactList())
-                );
-              }
-          )
+                    MaterialPageRoute(builder: (context) => ContactList()));
+              })
         ],
       ),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:mobile_e_123190147/model/contact_list_model.dart';
-import 'package:mobile_e_123190147/tools/common_submit_button.dart';
+import 'package:flutter_tugas_2/model/contact_list_model.dart';
+import 'package:flutter_tugas_2/tools/common_submit_button.dart';
 
 class ContactList extends StatefulWidget {
   const ContactList({Key? key}) : super(key: key);
@@ -25,11 +25,7 @@ class _ContactListState extends State<ContactList> {
       body: Container(
         padding: EdgeInsets.all(12),
         child: Column(
-          children: [
-            _buildInputField(),
-            _buildSubmitButton(),
-            _buildList()
-          ],
+          children: [_buildInputField(), _buildSubmitButton(), _buildList()],
         ),
       ),
     );
